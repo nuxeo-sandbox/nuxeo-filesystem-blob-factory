@@ -1,6 +1,6 @@
 # Nuxeo: File System Blob Importer
 
-Inspired by existing file system binaries [blob post](https://www.nuxeo.com/blog/referencing-existing-file-system-binaries-in-a-nuxeo-repository/)
+Inspired by existing file system binaries [blog post](https://www.nuxeo.com/blog/referencing-existing-file-system-binaries-in-a-nuxeo-repository/)
 
 ## Dependencies
 
