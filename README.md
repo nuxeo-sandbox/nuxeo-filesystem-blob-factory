@@ -44,6 +44,11 @@ filesystem.blob.provider=fs
 </extension>
 ```
 
+### References
+
+- https://doc.nuxeo.com/nxdoc/nuxeo-bulk-document-importer/
+- https://www.nuxeo.com/blog/referencing-existing-file-system-binaries-in-a-nuxeo-repository/
+
 ## Support
 
 **These features are sand-boxed and not yet part of the Nuxeo Production platform.**
