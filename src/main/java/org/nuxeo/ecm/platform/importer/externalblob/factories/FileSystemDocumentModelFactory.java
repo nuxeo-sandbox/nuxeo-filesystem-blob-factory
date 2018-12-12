@@ -1,3 +1,22 @@
+/*
+ * (C) Copyright 2014-2018 Nuxeo (http://nuxeo.com/) and others.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Contributors:
+ *     Nuxeo - initial API and implementation
+ *     Damon Brown (Nuxeo)
+ */
 package org.nuxeo.ecm.platform.importer.externalblob.factories;
 
 import java.io.File;
@@ -17,6 +36,16 @@ import org.nuxeo.ecm.platform.importer.factories.DefaultDocumentModelFactory;
 import org.nuxeo.ecm.platform.importer.source.SourceNode;
 import org.nuxeo.runtime.api.Framework;
 
+/**
+ * Special implementation for DocumentModel factory The default empty constructor create Folder for folderish file and
+ * File for other. But you can specify them using the other constructor. Also, if you are using .properties files to
+ * setup metadata, you can use the ecm:primaryType xpath to specify the type of document to create. This will override the
+ * default ones, and works for files and folders. If no .properties file is provided of it the current node has a
+ * .properties file but no ecm:primaryType, the default types are created. This works for leafType but also for
+ * folderish type.
+ *
+ * @author Damon Brown
+ */
 public class FileSystemDocumentModelFactory extends DefaultDocumentModelFactory {
 
     protected FileManager fileManager;
