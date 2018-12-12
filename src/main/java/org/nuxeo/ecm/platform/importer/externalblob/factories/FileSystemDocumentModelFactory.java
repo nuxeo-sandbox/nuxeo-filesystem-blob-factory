@@ -31,7 +31,6 @@ import org.nuxeo.ecm.core.api.blobholder.BlobHolder;
 import org.nuxeo.ecm.core.blob.BlobInfo;
 import org.nuxeo.ecm.core.blob.BlobManager;
 import org.nuxeo.ecm.core.blob.FilesystemBlobProvider;
-import org.nuxeo.ecm.platform.filemanager.api.FileManager;
 import org.nuxeo.ecm.platform.importer.factories.DefaultDocumentModelFactory;
 import org.nuxeo.ecm.platform.importer.source.SourceNode;
 import org.nuxeo.runtime.api.Framework;
@@ -47,8 +46,6 @@ import org.nuxeo.runtime.api.Framework;
  * @author Damon Brown
  */
 public class FileSystemDocumentModelFactory extends DefaultDocumentModelFactory {
-
-    protected FileManager fileManager;
 
     protected FilesystemBlobProvider blobProvider;
 
@@ -107,13 +104,6 @@ public class FileSystemDocumentModelFactory extends DefaultDocumentModelFactory 
             doc = setDocumentProperties(session, props, doc);
         }
         return doc;
-    }
-
-    protected FileManager getFileManager() {
-        if (fileManager == null) {
-            fileManager = Framework.getService(FileManager.class);
-        }
-        return fileManager;
     }
 
     protected FilesystemBlobProvider getBlobProvider() {
