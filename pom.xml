@@ -4,11 +4,11 @@
   <parent>
     <groupId>org.nuxeo</groupId>
     <artifactId>nuxeo-addons-parent</artifactId>
-    <version>10.2</version>
+    <version>10.3</version>
   </parent>
   <artifactId>nuxeo-filesystem-blob-factory</artifactId>
   <groupId>org.nuxeo.ecm.platform.importer.externalblob</groupId>
-  <version>1.0-SNAPSHOT</version>
+  <version>10.3-SNAPSHOT</version>
   <name>Nuxeo filesystem blob factory</name>
   <description>Nuxeo Filesystem Blob Factory</description>
 
