@@ -13,9 +13,8 @@ Build with maven (at least 3.3)
 ```
 mvn clean install
 ```
-> JAR built here: `target`
 
-> Copy to `nxserver/lib` directory of your Nuxeo installation.
+Install the marketplace package
 
 ## Configure (nuxeo.conf)
 

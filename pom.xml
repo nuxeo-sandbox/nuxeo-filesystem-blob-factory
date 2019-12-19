@@ -2,15 +2,23 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.nuxeo</groupId>
-    <artifactId>nuxeo-addons-parent</artifactId>
-    <version>10.3</version>
+    <groupId>org.nuxeo.ecm.distribution</groupId>
+    <artifactId>nuxeo-distribution</artifactId>
+    <version>10.10</version>
   </parent>
-  <artifactId>nuxeo-filesystem-blob-factory</artifactId>
+
   <groupId>org.nuxeo.ecm.platform.importer.externalblob</groupId>
-  <version>10.3-SNAPSHOT</version>
-  <name>Nuxeo filesystem blob factory</name>
+  <artifactId>nuxeo-filesystem-blob-factory-parent</artifactId>
+  <version>10.10-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Nuxeo filesystem blob factory parent</name>
   <description>Nuxeo Filesystem Blob Factory</description>
+
+  <modules>
+    <module>nuxeo-filesystem-blob-factory-core</module>
+    <module>nuxeo-filesystem-blob-factory-package</module>
+  </modules>
 
   <repositories>
     <repository>
@@ -60,19 +68,20 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-  <dependencies>
-    <dependency>
-      <groupId>org.nuxeo.ecm.automation</groupId>
-      <artifactId>nuxeo-automation-core</artifactId>
-    </dependency>
-        <dependency>
-      <groupId>org.nuxeo.ecm.platform</groupId>
-      <artifactId>nuxeo-importer-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.nuxeo.ecm.automation</groupId>
-      <artifactId>nuxeo-automation-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.nuxeo.ecm.platform.importer.externalblob</groupId>
+        <artifactId>nuxeo-filesystem-blob-factory-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.ecm.platform.importer.externalblob</groupId>
+        <artifactId>nuxeo-filesystem-blob-factory-package</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
 </project>

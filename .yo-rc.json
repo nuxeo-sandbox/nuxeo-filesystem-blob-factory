@@ -1,0 +1,11 @@
+{
+  "generator-nuxeo": {
+    "lastRemote": "C:\\Users\\michael\\.cache\\node-yeoman-remote-cache\\nuxeo\\generator-nuxeo-meta\\2.9.0",
+    "promptValues": {
+      "parent_package": "org.nuxeo.ecm.platform.importer.externalblob",
+      "parent_artifact": "nuxeo-filesystem-blob-factory-parent",
+      "parent_version": "10.10-SNAPSHOT"
+    },
+    "_nuxeo_version": "10.10-SNAPSHOT"
+  }
+}
